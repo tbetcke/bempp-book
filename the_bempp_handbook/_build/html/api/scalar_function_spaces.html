@@ -38,7 +38,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function Spaces on Segments" href="segment_spaces.html" />
+    <link rel="next" title="Vector Function Spaces" href="vector_function_spaces.html" />
     <link rel="prev" title="Defining a function space" href="creating_function_spaces.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,7 +74,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
+  <a class="reference internal" href="../intro.html">
    Introduction
   </a>
  </li>
@@ -103,6 +103,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Scalar Function Spaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vector_function_spaces.html">
+     Vector Function Spaces
     </a>
    </li>
    <li class="toctree-l2">
@@ -152,6 +157,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../core/assembling_fmm.html">
    Assembling Operators using FMM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematical background of boundary integral equations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../theory/function_spaces.html">
+   Function Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../theory/discrete_function_spaces.html">
+   Discrete Function Spaces
   </a>
  </li>
 </ul>
@@ -283,7 +305,7 @@
 <h2>Discontinuous polynomial spaces<a class="headerlink" href="#discontinuous-polynomial-spaces" title="Permalink to this headline">¶</a></h2>
 <p>DP spaces are polynomial inside each element and discontinuous between elements.
 An example basis function of an order 0 DP space is shown below.</p>
-<p><img alt="Discontinuous polynomial order 0 basis function" src="api/../img/dp0.png" />{: .smaller }</p>
+<p><img alt="Discontinuous polynomial order 0 basis function" src="../_images/dp0.png" />{: .smaller }</p>
 <p>These spaces can be created in Bempp with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">space</span> <span class="o">=</span> <span class="n">bempp</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">function_space</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s2">&quot;DP&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">space</span> <span class="o">=</span> <span class="n">bempp</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">function_space</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s2">&quot;DP&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -296,7 +318,7 @@ The DOFs of an order 1 DP space are at the three vertices of each cell.</p>
 <h2>Continuous polynomial spaces<a class="headerlink" href="#continuous-polynomial-spaces" title="Permalink to this headline">¶</a></h2>
 <p>P spaces are polynomial inside each element and continuous between elements.
 An example basis function of an order 1 P space is shown below.</p>
-<p><img alt="Continuous polynomial order 1 basis function" src="api/../img/p1.png" />{: .smaller }</p>
+<p><img alt="Continuous polynomial order 1 basis function" src="../_images/p1.png" />{: .smaller }</p>
 <p>This space can be created in Bempp with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">space</span> <span class="o">=</span> <span class="n">bempp</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">function_space</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -307,17 +329,17 @@ An example basis function of an order 1 P space is shown below.</p>
 <h2>Barycentric dual spaces<a class="headerlink" href="#barycentric-dual-spaces" title="Permalink to this headline">¶</a></h2>
 <p>To define the barycentric dual space, we first create the barycentrically refined mesh by joining
 each vertex of every triangle with the centre of the opposite side, as shown below.
-<img alt="Barycentrically refining a grid" src="api/../img/barycentric_mesh.png" />{: .smaller }</p>
+<img alt="Barycentrically refining a grid" src="../_images/barycentric_mesh.png" />{: .smaller }</p>
 <p>The order 0 dual spaces are piecewise constant functions on the dual cells.
 An example basis function of an order 0 DUAL space is shown below.
 Order 0 DUAL spaces form a stable dual pairing with order 1 P spaces.
-<img alt="Dual order 0 basis function" src="api/../img/dual0.png" />{: .smaller }</p>
+<img alt="Dual order 0 basis function" src="../_images/dual0.png" />{: .smaller }</p>
 <p>The order 1 dual basis functions are linear combinations of piecewise linear
 functions on the barycentric cells, and are defined in
 <a class="reference external" href="https://www.jstor.org/stable/40234460?seq=1"><em>A dual finite element complex on the barycentric refinement</em> (2007) by A. Buffa and S. Christiansen</a>.
 An example basis function of an order 1 DUAL space is shown below.
 Order 1 DUAL spaces form a stable dual pairing with order 0 DP spaces.
-<img alt="Dual order 1 basis function" src="api/../img/dual1.png" />{: .smaller }</p>
+<img alt="Dual order 1 basis function" src="../_images/dual1.png" />{: .smaller }</p>
 <p>These spaces can be created in Bempp with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">space</span> <span class="o">=</span> <span class="n">bempp</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">function_space</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s2">&quot;DUAL&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">space</span> <span class="o">=</span> <span class="n">bempp</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">function_space</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="s2">&quot;DUAL&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -359,7 +381,7 @@ The DOFs of an order 1 DUAL space are at the mispoints of each cell
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="creating_function_spaces.html" title="previous page">Defining a function space</a>
-    <a class='right-next' id="next-link" href="segment_spaces.html" title="next page">Function Spaces on Segments</a>
+    <a class='right-next' id="next-link" href="vector_function_spaces.html" title="next page">Vector Function Spaces</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

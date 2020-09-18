@@ -1,4 +1,4 @@
-- file: introduction
+- file: intro
 
 - part: API Overview
   chapters:
@@ -10,6 +10,7 @@
       sections:
         - file: api/creating_function_spaces
         - file: api/scalar_function_spaces
+        - file: api/vector_function_spaces
         - file: api/segment_spaces
     - file: api/grid_functions
     - file: api/boundary_operators
@@ -37,6 +38,21 @@
             - file: core/assembling_numba
             - file: core/assembling_opencl
             - file: core/assembling_fmm
+
+- part: Mathematical background of boundary integral equations
+  chapters:
+    - file: theory/function_spaces
+      sections:
+            - file: theory/sobolev_spaces
+    - file: theory/discrete_function_spaces
+      sections:
+            - file: theory/dofs
+            - file: theory/inf-sup
+            - file: theory/projections
+      
+
+
+      
 
 
 

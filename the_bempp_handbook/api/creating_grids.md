@@ -1,3 +1,5 @@
+# Overview
+
 A Bempp grid can be created using a built-in grid, by importing a gmsh file,
 or by providing the grid data.
 

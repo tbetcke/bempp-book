@@ -74,7 +74,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
+  <a class="reference internal" href="../intro.html">
    Introduction
   </a>
  </li>
@@ -103,6 +103,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="scalar_function_spaces.html">
      Scalar Function Spaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vector_function_spaces.html">
+     Vector Function Spaces
     </a>
    </li>
    <li class="toctree-l2">
@@ -140,6 +145,11 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="../core/assembling_numba.html">
+   Assembling Operators using Numba
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../core/assembling_opencl.html">
    Assembling Operators using OpenCL
   </a>
@@ -147,6 +157,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../core/assembling_fmm.html">
    Assembling Operators using FMM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematical background of boundary integral equations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../theory/function_spaces.html">
+   Function Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../theory/discrete_function_spaces.html">
+   Discrete Function Spaces
   </a>
  </li>
 </ul>
@@ -246,9 +273,9 @@ difference to earlier versions that also supported higher order spaces.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">space</span><span class="o">.</span><span class="n">global_dof_count</span>
 </pre></div>
 </div>
-<p>For solving Laplace or Helmholtz problems, <span class="xref myst">scalar function spaces</span>
+<p>For solving Laplace or Helmholtz problems, <a class="reference internal" href="scalar_function_spaces.html"><span class="doc std std-doc">scalar function spaces</span></a>
 should be used.
-For solving Maxwell’s equations, <span class="xref myst">vector function spaces</span>
+For solving Maxwell’s equations, <a class="reference internal" href="vector_function_spaces.html"><span class="doc std std-doc">vector function spaces</span></a>
 should be used.</p>
 </div>
 

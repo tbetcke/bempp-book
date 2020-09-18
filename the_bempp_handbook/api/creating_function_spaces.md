@@ -1,5 +1,4 @@
-Defining a function space
-=========================
+# Defining a function space
 
 
 The function `function_space` is used to initialise spaces. To define
@@ -26,7 +25,7 @@ The number of degrees of freedom (DOFs) in a space can be found using:
 space.global_dof_count
 ```
 
-For solving Laplace or Helmholtz problems, [scalar function spaces](scalar_spaces.md)
+For solving Laplace or Helmholtz problems, [scalar function spaces](scalar_function_spaces.md)
 should be used.
-For solving Maxwell's equations, [vector function spaces](vector_spaces.md)
+For solving Maxwell's equations, [vector function spaces](./vector_function_spaces.md)
 should be used.
