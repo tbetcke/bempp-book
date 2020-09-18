@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Querying grid information &#8212; The Bempp Handbook</title>
+    <title>Using Grids &#8212; The Bempp Handbook</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Function Spaces" href="function_spaces.html" />
-    <link rel="prev" title="Built-in grids" href="creating_grids.html" />
+    <link rel="prev" title="Overview" href="creating_grids.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,7 +73,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
+  <a class="reference internal" href="../intro.html">
    Introduction
   </a>
  </li>
@@ -91,27 +91,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="creating_grids.html">
-     Built-in grids
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="creating_grids.html#importing-a-grid">
-     Importing a grid
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="creating_grids.html#creating-a-grid-from-element-data">
-     Creating a grid from element data
+     Overview
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Querying grid information
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#plotting-and-exporting-grids">
-     Plotting and exporting grids
+     Using Grids
     </a>
    </li>
   </ul>
@@ -161,6 +146,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../core/assembling_fmm.html">
    Assembling Operators using FMM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematical background of boundary integral equations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../theory/function_spaces.html">
+   Function Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../theory/discrete_function_spaces.html">
+   Discrete Function Spaces
   </a>
  </li>
 </ul>
@@ -232,7 +234,19 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#querying-grid-information">
+   Querying grid information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-and-exporting-grids">
+   Plotting and exporting grids
+  </a>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -241,10 +255,12 @@
         
               <div>
                 
-  <p>Once you have created a Bempp grid, you may want to use information about your grid.
+  <div class="section" id="using-grids">
+<h1>Using Grids<a class="headerlink" href="#using-grids" title="Permalink to this headline">¶</a></h1>
+<p>Once you have created a Bempp grid, you may want to use information about your grid.
 This page show how commonly used information can be obtained from a Bempp grid.</p>
 <div class="section" id="querying-grid-information">
-<h1>Querying grid information<a class="headerlink" href="#querying-grid-information" title="Permalink to this headline">¶</a></h1>
+<h2>Querying grid information<a class="headerlink" href="#querying-grid-information" title="Permalink to this headline">¶</a></h2>
 <p>The number of elements, edges and vertices in a grid are given by:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">number_of_elements</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">number_of_edges</span>
@@ -311,7 +327,7 @@ Edges in Bempp are ordered in the following way:</p>
 <a class="reference external" href="https://bempp-cl.readthedocs.io/en/latest/docs/bempp/api/grid/grid/index.html#bempp.api.grid.grid.Grid">here</a>.</p>
 </div>
 <div class="section" id="plotting-and-exporting-grids">
-<h1>Plotting and exporting grids<a class="headerlink" href="#plotting-and-exporting-grids" title="Permalink to this headline">¶</a></h1>
+<h2>Plotting and exporting grids<a class="headerlink" href="#plotting-and-exporting-grids" title="Permalink to this headline">¶</a></h2>
 <p>To export a grid, we can use the <code class="docutils literal notranslate"><span class="pre">export</span></code> command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bempp</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s1">&#39;grid.msh&#39;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="n">grid</span><span class="p">)</span>
 </pre></div>
@@ -329,6 +345,7 @@ The following command can be used to change the plotting backend.</p>
 </pre></div>
 </div>
 <p>This requires Gmsh or Paraview to be available in the system path.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -359,7 +376,7 @@ The following command can be used to change the plotting backend.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="creating_grids.html" title="previous page">Built-in grids</a>
+    <a class='left-prev' id="prev-link" href="creating_grids.html" title="previous page">Overview</a>
     <a class='right-next' id="next-link" href="function_spaces.html" title="next page">Function Spaces</a>
 
     </div>

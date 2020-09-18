@@ -1,27 +1,23 @@
----
-title: Vector Function Spaces
-layout: handbook
----
+# Vector Function Spaces
+
 
 The following vector-valued spaces are supported in Bempp:
 
----------- | ----- | -----------
 Space Type | Order | Description
 ---------- | ----- | -----------
 `"RWG"`    | 0     | Rao--Wilson--Glisson Hdiv functions
 `"SNC"`    | 0     | Scaled N&eacute;d&eacute;lec Hcurl functions
 `"BC"`     | 0     | Buffa--Christiansen Hdiv functions
 `"RBC"`    | 0     | Rotated Buffa--Christiansen Hcurl functions
----------- | ----- | -----------
 
 When solving Maxwell's equations, the correct combination of Hdiv and Hcurl spaces must be used.
 
 ## RWG and SNC spaces
 RWG and SNC spaces are vector-valued spaces, whose values are tangential to the surface triangles.
 Inside each cell, these spaces are linear combinations of the vectors
-$\left(\begin{array}{c}1\\\\0\end{array}\right)$,
-$\left(\begin{array}{c}0\\\\1\end{array}\right)$, and
-$\left(\begin{array}{c}-y\\\\x\end{array}\right)$. Between cells, RWG functions are continuous normal
+$\left(\begin{array}{c}1\\0\end{array}\right)$,
+$\left(\begin{array}{c}0\\1\end{array}\right)$, and
+$\left(\begin{array}{c}-y\\x\end{array}\right)$. Between cells, RWG functions are continuous normal
 to the triangle's edges, while SNC spaces are continuous tangential to the triangle's edges.
 Example RWG (left) and SNC (right) basis functions are shown below.
 

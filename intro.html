@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to your Jupyter Book &#8212; The Bempp Handbook</title>
+    <title>Introduction &#8212; The Bempp Handbook</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -37,6 +37,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Grids" href="api/grids.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -71,7 +72,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
+  <a class="reference internal" href="#">
    Introduction
   </a>
  </li>
@@ -132,6 +133,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="core/assembling_fmm.html">
    Assembling Operators using FMM
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematical background of boundary integral equations
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="theory/function_spaces.html">
+   Function Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theory/discrete_function_spaces.html">
+   Discrete Function Spaces
   </a>
  </li>
 </ul>
@@ -212,11 +230,36 @@
         
               <div>
                 
-  <div class="section" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.</p>
-<p>Check out the content pages bundled with this sample book to get started.</p>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The boundary element method (BEM) is a numerical method for approximating the solution of partial differential equations (PDEs).
+The method finds the approximation by discretising a boundary integral equation that can be derived from the PDE.</p>
+<p>Bempp is an open-source boundary element method library that can be used to assemble all the standard integral kernels for
+Laplace, Helmholtz, modified Helmholtz, and Maxwell problems. The library has a user-friendly Python interface that allows the
+user to use BEM to solve a variety of problems, including problems in electrostatics, acoustics and electromagnetics.</p>
+<p>Bempp began life as BEM++, and was a Python library with a fast C++ computational core. The ++ slowly changed to a pp as
+functionality gradually moved from C++ to Python. The latest version, <code class="docutils literal notranslate"><span class="pre">bempp-cl</span></code>, is a complete rewrite of the library, with
+the C++ core replaced by just-in-time compiled OpenCL kernels, and has many improvements over past versions of the library.</p>
+<p>Bempp is divided into two parts: <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code> and <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>.
+The user interface of the library is contained in <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code>.
+The core assembly routines of the library are contained in <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>. The majority of users of Bempp are unlikely to need
+to directly interact with the functionality in <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>.</p>
+<p>In this handbook, we introduce and demonstrate the functionality of Bempp. The handbook is split into three parts.
+First, we present a guide to using Bempp. This part of the handbook takes the reader
+through all the major functionality contained in the <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code> user interface.</p>
+<p>In the second part of the handbook, we take a journey into the Bempp core where we look in more detail
+at the internal behaviour of the Bempp assemblers</p>
+<p>For the final part of the handbook, we present a Bempp user’s introduction to boundary element methods.
+This part of the handbook aims the introduce the mathematics underlying BEM and highlight important aspects of the
+theory that should be taken into account when deciding how to approach BEM problems.</p>
+<p>This handbook is hosted on <a class="reference external" href="https://github.com/bempp/bempp-handbook">GitHub</a> and we welcome suggestions for improving it
+in the issues and pull requests.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -247,6 +290,7 @@ structured.</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='right-next' id="next-link" href="api/grids.html" title="next page">Grids</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

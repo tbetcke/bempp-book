@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; The Bempp Handbook</title>
+    <title>Discrete Function Spaces &#8212; The Bempp Handbook</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Degrees of Freedom (DOFs)" href="dofs.html" />
+    <link rel="prev" title="Sobolev Spaces" href="sobolev_spaces.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -71,7 +73,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
+  <a class="reference internal" href="../intro.html">
    Introduction
   </a>
  </li>
@@ -120,19 +122,53 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="assembling_numba.html">
+  <a class="reference internal" href="../core/assembling_numba.html">
    Assembling Operators using Numba
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="assembling_opencl.html">
+  <a class="reference internal" href="../core/assembling_opencl.html">
    Assembling Operators using OpenCL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="assembling_fmm.html">
+  <a class="reference internal" href="../core/assembling_fmm.html">
    Assembling Operators using FMM
   </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematical background of boundary integral equations
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="function_spaces.html">
+   Function Spaces
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Discrete Function Spaces
+  </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dofs.html">
+     Degrees of Freedom (DOFs)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="inf-sup.html">
+     Inf-Sup Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="projections.html">
+     Interpolation and Projection
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -176,7 +212,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/core/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/theory/discrete_function_spaces.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -212,11 +248,14 @@
         
               <div>
                 
-  <p>Bempp is split into two parts: <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code>, which contains all the user-facing functionality
-of the library; and <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>, which contains the library’s fast assembly routines.</p>
-<p>In <a class="reference internal" href="../api/index.html"><span class="doc std std-doc">the first section of this handbook</span></a>, we explored the functionality
-in <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code>. In this section, we take a look at the fast core of the library and look at
-how operator assembly is carried out.</p>
+  <div class="section" id="discrete-function-spaces">
+<h1>Discrete Function Spaces<a class="headerlink" href="#discrete-function-spaces" title="Permalink to this headline">¶</a></h1>
+<p>When approximating the solution of a problem with the boundary element method, finite-dimensional
+subspaces of the relevant <a class="reference internal" href="sobolev_spaces.html"><span class="doc std std-doc">Sobolev spaces</span></a> are used to discretise the problem.</p>
+<p>In this section of the Bempp Handbook, we look at how these discrete spaces are defined.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -231,7 +270,7 @@ how operator assembly is carried out.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./core"
+            path: "./theory"
         },
         predefinedOutput: true
     }
@@ -246,6 +285,8 @@ how operator assembly is carried out.</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="sobolev_spaces.html" title="previous page">Sobolev Spaces</a>
+    <a class='right-next' id="next-link" href="dofs.html" title="next page">Degrees of Freedom (DOFs)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

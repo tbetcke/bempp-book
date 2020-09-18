@@ -6,25 +6,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; The Bempp Handbook</title>
+    <title>Inf-Sup Stability &#8212; The Bempp Handbook</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
@@ -34,10 +34,11 @@
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Grids" href="api/grids.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interpolation and Projection" href="projections.html" />
+    <link rel="prev" title="Degrees of Freedom (DOFs)" href="dofs.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -54,9 +55,9 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
+<a class="navbar-brand text-wrap" href="../index.html">
   
-  <img src="_static/logo.png" class="logo" alt="logo">
+  <img src="../_static/logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">The Bempp Handbook</h1>
@@ -64,7 +65,7 @@
 </a>
 </div>
 
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
@@ -72,7 +73,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="#">
+  <a class="reference internal" href="../intro.html">
    Introduction
   </a>
  </li>
@@ -84,32 +85,32 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="api/grids.html">
+  <a class="reference internal" href="../api/grids.html">
    Grids
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="api/function_spaces.html">
+  <a class="reference internal" href="../api/function_spaces.html">
    Function Spaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="api/grid_functions.html">
+  <a class="reference internal" href="../api/grid_functions.html">
    Grid Functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="api/boundary_operators.html">
+  <a class="reference internal" href="../api/boundary_operators.html">
    Boundary Operators
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="api/solvers.html">
+  <a class="reference internal" href="../api/solvers.html">
    Linear Solvers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="api/potential_operators.html">
+  <a class="reference internal" href="../api/potential_operators.html">
    Potential Operators
   </a>
  </li>
@@ -121,19 +122,53 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="core/assembling_numba.html">
+  <a class="reference internal" href="../core/assembling_numba.html">
    Assembling Operators using Numba
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="core/assembling_opencl.html">
+  <a class="reference internal" href="../core/assembling_opencl.html">
    Assembling Operators using OpenCL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="core/assembling_fmm.html">
+  <a class="reference internal" href="../core/assembling_fmm.html">
    Assembling Operators using FMM
   </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematical background of boundary integral equations
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="function_spaces.html">
+   Function Spaces
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="discrete_function_spaces.html">
+   Discrete Function Spaces
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="dofs.html">
+     Degrees of Freedom (DOFs)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Inf-Sup Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="projections.html">
+     Interpolation and Projection
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -177,7 +212,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/introduction.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/theory/inf-sup.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -213,34 +248,31 @@
         
               <div>
                 
-  <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>The boundary element method (BEM) is a numerical method for approximating the solution of partial differential equations (PDEs).
-The method finds the approximation by discretising a boundary integral equation that can be derived from the PDE.</p>
-<p>Bempp is an open-source boundary element method library that can be used to assemble all the standard integral kernels for
-Laplace, Helmholtz, modified Helmholtz, and Maxwell problems. The library has a user-friendly Python interface that allows the
-user to use BEM to solve a variety of problems, including problems in electrostatics, acoustics and electromagnetics.</p>
-<p>Bempp began life as BEM++, and was a Python library with a fast C++ computational core. The ++ slowly changed to a pp as
-functionality gradually moved from C++ to Python. The latest version, <code class="docutils literal notranslate"><span class="pre">bempp-cl</span></code>, is a complete rewrite of the library, with
-the C++ core replaced by just-in-time compiled OpenCL kernels, and has many improvements over past versions of the library.</p>
-<p>Bempp is divided into two parts: <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code> and <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>.
-The user interface of the library is contained in <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code>.
-The core assembly routines of the library are contained in <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>. The majority of users of Bempp are unlikely to need
-to directly interact with the functionality in <code class="docutils literal notranslate"><span class="pre">bempp.core</span></code>.</p>
-<p>In this handbook, we introduce and demonstrate the functionality of Bempp. The handbook is split into three parts.
-First, we present <a class="reference internal" href="api/index.html"><span class="doc std std-doc">a guide to using Bempp</span></a>. This part of the handbook takes the reader
-through all the major functionality contained in the <code class="docutils literal notranslate"><span class="pre">bempp.api</span></code> user interface.</p>
-<p>In the second part of the handbook, we take <a class="reference internal" href="core/index.html"><span class="doc std std-doc">a journey into the Bempp core</span></a> where we look in more detail
-at the internal behaviour of the Bempp assemblers</p>
-<p>For the final part of the handbook, we present <span class="xref myst">a Bempp user’s introduction to boundary element methods</span>.
-This part of the handbook aims the introduce the mathematics underlying BEM and highlight important aspects of the
-theory that should be taken into account when deciding how to approach BEM problems.</p>
-<p>This handbook is hosted on <a class="reference external" href="https://github.com/bempp/bempp-handbook">GitHub</a> and we welcome suggestions for improving it
-in the issues and pull requests.</p>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="inf-sup-stability">
+<h1>Inf-Sup Stability<a class="headerlink" href="#inf-sup-stability" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(\mathcal{V}_h=\operatorname{span}\{\phi_1,...,\phi_n\}\)</span>
+and
+<span class="math notranslate nohighlight">\(\mathcal{W}_h=\operatorname{span}\{\psi_1,...,\psi_n\}\)</span>
+be two finite dimensional spaces. We define the mass matrix
+<span class="math notranslate nohighlight">\(M=(m_{ij})\)</span>
+between these two spaces by</p>
+<div class="math notranslate nohighlight">
+\[
+m_{ij}=\int_\Gamma \psi_j\cdot\phi_i.
+\]</div>
+<p>When forming products of operators, the inverse of this mass matrix will be used. It is therefore
+important that the matrix is non-singular. It can be shown that the matrix will be non-singular
+if the following inf-sup condition holds:</p>
+<p>There exists an <span class="math notranslate nohighlight">\(h\)</span>-independent constant <span class="math notranslate nohighlight">\(c&gt;0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+\inf_{\phi\in\mathcal{V}_h}\sup_{\psi\in\mathcal{W}_h}\frac{\int_\Gamma \psi\cdot\phi}
+{\|\phi\|\|\psi\|}
+\geqslant c.
+\]</div>
+<p>This condition does not hold for the mass matrix between RWG and SNC spaces. It does however
+hold between RWG and RBC, and between BC and SNC spaces. When solving Maxwell problems, care
+must therefore be taken to ensure that all mass matrices involved are stably invertible.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -256,7 +288,7 @@ in the issues and pull requests.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./theory"
         },
         predefinedOutput: true
     }
@@ -271,7 +303,8 @@ in the issues and pull requests.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="api/grids.html" title="next page">Grids</a>
+    <a class='left-prev' id="prev-link" href="dofs.html" title="previous page">Degrees of Freedom (DOFs)</a>
+    <a class='right-next' id="next-link" href="projections.html" title="next page">Interpolation and Projection</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -290,7 +323,7 @@ in the issues and pull requests.</p>
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    <script src="../_static/js/index.js"></script>
     
   </body>
 </html>

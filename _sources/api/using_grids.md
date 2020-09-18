@@ -1,3 +1,5 @@
+# Using Grids
+
 Once you have created a Bempp grid, you may want to use information about your grid.
 This page show how commonly used information can be obtained from a Bempp grid.
 
